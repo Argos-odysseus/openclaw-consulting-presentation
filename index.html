@@ -3,396 +3,477 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OpenClaw Consulting Pilot</title>
+    <title>OpenClaw Agent OS Showcase</title>
     <meta
       name="description"
-      content="A buyer-facing consulting pitch for turning agent experiments into measurable delivery leverage with OpenClaw."
+      content="A technical OpenClaw showcase for agent builders, model engineers, and system architects."
     />
-    <meta property="og:title" content="OpenClaw Consulting Pilot" />
+    <meta property="og:title" content="OpenClaw Agent OS Showcase" />
     <meta
       property="og:description"
-      content="A practical pilot offer for safer, faster agent-assisted delivery in software teams."
+      content="Models, harnesses, control planes, memory, permissions, tools, nodes, and verified action."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://argos-odysseus.github.io/openclaw-consulting-presentation/" />
-    <meta name="theme-color" content="#14342f" />
+    <meta name="theme-color" content="#102329" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="deck-shell">
       <header class="topbar">
         <div>
-          <p class="eyebrow">OpenClaw Consulting</p>
-          <h1>Turn AI experiments into safer delivery leverage</h1>
+          <p class="eyebrow">OpenClaw showcase</p>
+          <h1>Agent runtime, harness model, and operating-system control plane</h1>
         </div>
         <div class="topbar-meta">
-          <p>For engineering leaders who need faster review, triage, and handoff without losing control.</p>
-          <p>Static buyer deck. No backend, tracking, or live client data.</p>
+          <p>For practitioners building agents, tool runtimes, model harnesses, and distributed automation systems.</p>
+          <p>Static technical deck. Inline diagrams only. No external assets, telemetry, or live client data.</p>
         </div>
       </header>
 
       <main class="deck" id="deck" aria-live="polite">
-        <section class="slide is-active" id="slide-1" data-title="Client Outcome">
-          <div class="slide-grid slide-grid-hero">
+        <section class="slide is-active" id="slide-1" data-title="System Model">
+          <div class="slide-grid slide-grid-wide">
             <div>
               <p class="section-kicker">1 / 10</p>
-              <h2>What the client gets</h2>
+              <h2>Start with the system model</h2>
               <p class="lede">
-                A measured pilot that turns one painful engineering workflow into an agent-assisted
-                operating loop with human approvals, evidence, and clear stop/go criteria.
+                A model is not an operating entity. OpenClaw wraps model capability in a harness that
+                assembles context, gates tools, records state, delegates work, verifies results, and
+                publishes only actions the runtime can account for.
               </p>
-              <div class="outcome-row">
+              <div class="principle-grid">
                 <article>
-                  <span>Faster</span>
-                  <p>Less time spent reloading context before useful engineering judgment starts.</p>
+                  <span>Model</span>
+                  <p>Probabilistic reasoning and generation.</p>
                 </article>
                 <article>
-                  <span>Safer</span>
-                  <p>External messages, production changes, and sensitive actions stay behind gates.</p>
+                  <span>Harness</span>
+                  <p>IO contract, policy, state, tools, and validation.</p>
                 </article>
                 <article>
-                  <span>Reusable</span>
-                  <p>Decisions, checks, and lessons are captured so the next task starts warmer.</p>
+                  <span>Runtime</span>
+                  <p>Sessions, jobs, nodes, permissions, logs, and external effects.</p>
                 </article>
               </div>
             </div>
-            <div class="panel value-panel">
-              <p class="panel-label">Pilot promise</p>
-              <h3>One team. One workflow. One metric.</h3>
-              <p>
-                We do not sell generic AI transformation. We help you prove whether agents can
-                improve a real delivery workflow without creating new operational risk.
-              </p>
-            </div>
+            <figure class="diagram-card" aria-label="Human intent through harness to verified action">
+              <svg class="diagram-svg" viewBox="0 0 760 360" role="img" aria-labelledby="system-model-title">
+                <title id="system-model-title">Human intent flows through harness, model, tools, state, and verification</title>
+                <defs>
+                  <marker id="arrow-system" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+                    <path d="M0,0 L0,6 L9,3 z" fill="#36515b"></path>
+                  </marker>
+                </defs>
+                <path class="connector" d="M125 180 H250" marker-end="url(#arrow-system)"></path>
+                <path class="connector" d="M360 180 H470" marker-end="url(#arrow-system)"></path>
+                <path class="connector" d="M570 160 C640 120 675 125 705 160" marker-end="url(#arrow-system)"></path>
+                <path class="connector" d="M570 200 C640 240 675 235 705 200" marker-end="url(#arrow-system)"></path>
+                <path class="connector dashed" d="M705 240 C625 310 210 310 125 220" marker-end="url(#arrow-system)"></path>
+                <rect class="node input" x="28" y="126" width="120" height="108" rx="8"></rect>
+                <text class="node-title" x="88" y="166">Human</text>
+                <text class="node-copy" x="88" y="191">intent</text>
+                <text class="node-copy" x="88" y="212">constraints</text>
+                <rect class="node process" x="248" y="86" width="132" height="188" rx="8"></rect>
+                <text class="node-title" x="314" y="130">Harness</text>
+                <text class="node-copy" x="314" y="160">context policy</text>
+                <text class="node-copy" x="314" y="184">tool gates</text>
+                <text class="node-copy" x="314" y="208">state rules</text>
+                <text class="node-copy" x="314" y="232">verification</text>
+                <rect class="node model" x="468" y="126" width="122" height="108" rx="8"></rect>
+                <text class="node-title" x="529" y="166">Model(s)</text>
+                <text class="node-copy" x="529" y="191">reasoning</text>
+                <text class="node-copy" x="529" y="212">generation</text>
+                <rect class="node storage" x="628" y="52" width="110" height="72" rx="8"></rect>
+                <text class="node-title" x="683" y="83">State</text>
+                <text class="node-copy" x="683" y="105">memory / logs</text>
+                <rect class="node external" x="628" y="236" width="110" height="72" rx="8"></rect>
+                <text class="node-title" x="683" y="267">Tools</text>
+                <text class="node-copy" x="683" y="289">local / remote</text>
+                <rect class="node output" x="28" y="258" width="120" height="58" rx="8"></rect>
+                <text class="node-title" x="88" y="292">Verified action</text>
+              </svg>
+            </figure>
           </div>
-          <aside class="notes">
-            Open with the result and the buying decision, not the internal OpenClaw machinery.
-          </aside>
         </section>
 
-        <section class="slide" id="slide-2" data-title="Client Problem">
+        <section class="slide" id="slide-2" data-title="Harness">
           <div class="slide-grid">
             <div>
               <p class="section-kicker">2 / 10</p>
-              <h2>The expensive part is not typing code</h2>
+              <h2>What a harness is</h2>
               <p class="lede">
-                Senior engineers lose hours to rediscovery: reading stale threads, finding the
-                right diff, checking failed tests, rebuilding incident context, and remembering why
-                the last decision was made.
+                A harness is the boundary and interface around model capability. It decides what the
+                model can see, which tools it may call, what memory is visible, what state can change,
+                which actions require approval, and how outputs are checked before they become effects.
               </p>
-              <div class="problem-list">
-                <p>PRs wait while reviewers reconstruct intent.</p>
-                <p>Incidents drift because evidence lives across logs, chats, dashboards, and repos.</p>
-                <p>Runbooks rot because the lesson is not captured when the work is fresh.</p>
-                <p>AI use stays informal, so leaders cannot inspect risk or repeat success.</p>
+              <div class="definition-list">
+                <p><strong>IO contracts:</strong> structured task inputs, output formats, schemas, and evidence requirements.</p>
+                <p><strong>Tool gates:</strong> callable capabilities constrained by policy, sandbox, and action class.</p>
+                <p><strong>Context policy:</strong> retrieval, redaction, memory scope, and prompt-injection resistance.</p>
+                <p><strong>Verification:</strong> tests, lint, browser checks, diff review, confirmations, and logging.</p>
               </div>
             </div>
-            <div class="panel metric-panel">
-              <p class="panel-label">Buyer question</p>
-              <h3>How much expert time is spent before the expert can make the decision?</h3>
-              <p>
-                The pilot targets that waste first. A useful agent does not replace judgment; it
-                prepares the ground so judgment arrives sooner and with better evidence.
-              </p>
-            </div>
+            <figure class="diagram-card compact-diagram" aria-label="Harness layers around a model">
+              <div class="harness-stack">
+                <div class="stack-layer layer-contract">IO contract</div>
+                <div class="stack-layer layer-policy">Context policy</div>
+                <div class="stack-layer layer-gates">Tool gates</div>
+                <div class="stack-core">Model</div>
+                <div class="stack-layer layer-memory">Memory + state</div>
+                <div class="stack-layer layer-verify">Verification</div>
+                <div class="stack-layer layer-rules">Operating rules</div>
+              </div>
+            </figure>
           </div>
         </section>
 
-        <section class="slide" id="slide-3" data-title="Failure Mode">
-          <div class="slide-grid">
+        <section class="slide" id="slide-3" data-title="Agent OS">
+          <div class="slide-grid slide-grid-wide">
             <div>
               <p class="section-kicker">3 / 10</p>
-              <h2>Why ad hoc AI adoption stalls</h2>
-              <div class="failure-grid">
-                <article>
-                  <h3>Useful demos</h3>
-                  <p>Teams see impressive answers in chat and IDE tools.</p>
-                </article>
-                <article>
-                  <h3>Weak operations</h3>
-                  <p>There is no durable memory, approval model, evidence trail, or owner.</p>
-                </article>
-                <article>
-                  <h3>Risk backlash</h3>
-                  <p>One unsafe action, hallucinated fact, or leaked detail makes leaders freeze rollout.</p>
-                </article>
-                <article>
-                  <h3>No business case</h3>
-                  <p>Because usage is informal, nobody can show what got faster or safer.</p>
-                </article>
+              <h2>OpenClaw as an agent OS</h2>
+              <p class="lede">
+                The useful metaphor is not "chatbot with tools." It is an operating system: a runtime
+                that schedules agent processes, mediates device drivers, mounts memory, enforces
+                permissions, and controls side effects across local and remote capabilities.
+              </p>
+              <div class="os-map">
+                <article><span>Kernel / control plane</span><p>Session state, policies, routing, permission checks, logs.</p></article>
+                <article><span>Processes</span><p>Main agent, subagents, explorers, workers, detached jobs.</p></article>
+                <article><span>Filesystem / memory</span><p>Workspace, daily logs, long-term memory, task traces.</p></article>
+                <article><span>Drivers</span><p>Shell, browser, nodes, messaging, connectors, cameras, files.</p></article>
               </div>
             </div>
-            <div class="panel warning-panel">
-              <p class="panel-label">Failure mode</p>
-              <h3>More tools, less trust.</h3>
-              <p>
-                The answer is not a longer feature inventory. The answer is a small operating model:
-                scoped work, visible checks, explicit approvals, and a metric the buyer already
-                cares about.
-              </p>
-            </div>
+            <figure class="diagram-card" aria-label="OpenClaw operating system metaphor">
+              <svg class="diagram-svg" viewBox="0 0 760 390" role="img" aria-labelledby="os-title">
+                <title id="os-title">OpenClaw runtime as kernel, processes, memory, drivers, scheduler, and permissions</title>
+                <defs>
+                  <marker id="arrow-os" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+                    <path d="M0,0 L0,6 L9,3 z" fill="#36515b"></path>
+                  </marker>
+                </defs>
+                <path class="connector" d="M380 126 V76" marker-end="url(#arrow-os)"></path>
+                <path class="connector" d="M380 264 V318" marker-end="url(#arrow-os)"></path>
+                <path class="connector" d="M250 196 H134" marker-end="url(#arrow-os)"></path>
+                <path class="connector" d="M510 196 H626" marker-end="url(#arrow-os)"></path>
+                <path class="connector dashed" d="M286 126 C210 82 165 84 118 116" marker-end="url(#arrow-os)"></path>
+                <path class="connector dashed" d="M474 126 C550 82 596 84 642 116" marker-end="url(#arrow-os)"></path>
+                <rect class="node process" x="250" y="126" width="260" height="138" rx="10"></rect>
+                <text class="node-title big" x="380" y="174">OpenClaw kernel</text>
+                <text class="node-copy" x="380" y="204">routing / policy / state / logs</text>
+                <text class="node-copy" x="380" y="228">approval gates / side effects</text>
+                <rect class="node model" x="270" y="22" width="220" height="54" rx="8"></rect>
+                <text class="node-title" x="380" y="56">Model processes</text>
+                <rect class="node storage" x="264" y="318" width="232" height="54" rx="8"></rect>
+                <text class="node-title" x="380" y="352">Filesystem + memory</text>
+                <rect class="node input" x="28" y="152" width="106" height="88" rx="8"></rect>
+                <text class="node-title" x="81" y="188">Human</text>
+                <text class="node-copy" x="81" y="212">operator</text>
+                <rect class="node external" x="626" y="152" width="106" height="88" rx="8"></rect>
+                <text class="node-title" x="679" y="188">Drivers</text>
+                <text class="node-copy" x="679" y="212">tools / nodes</text>
+                <rect class="node risk" x="38" y="82" width="122" height="54" rx="8"></rect>
+                <text class="node-title" x="99" y="116">Permissions</text>
+                <rect class="node output" x="600" y="82" width="122" height="54" rx="8"></rect>
+                <text class="node-title" x="661" y="116">Scheduler</text>
+              </svg>
+            </figure>
           </div>
         </section>
 
-        <section class="slide" id="slide-4" data-title="Operating Layer">
+        <section class="slide" id="slide-4" data-title="Model Routing">
           <div class="slide-grid">
             <div>
               <p class="section-kicker">4 / 10</p>
-              <h2>OpenClaw is the delivery layer underneath the consultant</h2>
+              <h2>Model routing is runtime behavior</h2>
               <p class="lede">
-                OpenClaw coordinates local files, scripts, browser checks, app connectors, memory,
-                and bounded subagents so a consultant can run a repeatable workflow instead of a
-                one-off prompt session.
+                Different model calls have different cost, latency, uncertainty, and tool-risk
+                profiles. OpenClaw treats model choice as a routing decision inside the harness,
+                not as a hardcoded identity of the agent.
               </p>
-              <div class="loop-strip" aria-label="Agent operating loop">
-                <span>Intake</span>
-                <span>Context</span>
-                <span>Execute</span>
-                <span>Verify</span>
-                <span>Deliver</span>
-                <span>Capture</span>
+              <div class="route-table">
+                <div class="route-row route-head"><span>Role</span><span>Optimized for</span><span>Typical gate</span></div>
+                <div class="route-row"><span>Default</span><span>Balanced reasoning and execution</span><span>Normal workspace tools</span></div>
+                <div class="route-row"><span>Explorer</span><span>Fast codebase or document lookup</span><span>Read-only evidence</span></div>
+                <div class="route-row"><span>Worker</span><span>Scoped implementation</span><span>Owned file/module set</span></div>
+                <div class="route-row"><span>Specialist</span><span>High-depth review, vision, audio, web</span><span>Explicit task contract</span></div>
               </div>
             </div>
-            <div class="panel">
-              <p class="panel-label">Only product detail that matters here</p>
-              <ul class="fact-list">
-                <li>Local workspace and static artifacts stay inspectable.</li>
-                <li>Agents can gather evidence across repos, browser state, docs, and messages.</li>
-                <li>Risky external or irreversible actions require human approval.</li>
-                <li>Memory and notes preserve the lesson after the task is done.</li>
-              </ul>
-            </div>
+            <figure class="diagram-card compact-diagram" aria-label="Model routing topology">
+              <svg class="diagram-svg" viewBox="0 0 560 390" role="img" aria-labelledby="routing-title">
+                <title id="routing-title">Router selects default, explorer, worker, specialist, or fallback model paths</title>
+                <defs>
+                  <marker id="arrow-route" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+                    <path d="M0,0 L0,6 L9,3 z" fill="#36515b"></path>
+                  </marker>
+                </defs>
+                <path class="connector" d="M98 195 H218" marker-end="url(#arrow-route)"></path>
+                <path class="connector" d="M302 174 C355 80 400 65 462 72" marker-end="url(#arrow-route)"></path>
+                <path class="connector" d="M322 195 H438" marker-end="url(#arrow-route)"></path>
+                <path class="connector" d="M302 216 C355 310 400 325 462 318" marker-end="url(#arrow-route)"></path>
+                <path class="connector dashed" d="M278 236 V306" marker-end="url(#arrow-route)"></path>
+                <rect class="node input" x="28" y="160" width="88" height="70" rx="8"></rect>
+                <text class="node-title" x="72" y="190">Task</text>
+                <text class="node-copy" x="72" y="211">contract</text>
+                <rect class="node process" x="218" y="146" width="104" height="98" rx="8"></rect>
+                <text class="node-title" x="270" y="185">Router</text>
+                <text class="node-copy" x="270" y="207">policy + fit</text>
+                <rect class="node model" x="438" y="38" width="96" height="66" rx="8"></rect>
+                <text class="node-title" x="486" y="67">Explorer</text>
+                <text class="node-copy" x="486" y="87">read-only</text>
+                <rect class="node model" x="438" y="162" width="96" height="66" rx="8"></rect>
+                <text class="node-title" x="486" y="191">Worker</text>
+                <text class="node-copy" x="486" y="211">patch scope</text>
+                <rect class="node model" x="438" y="286" width="96" height="66" rx="8"></rect>
+                <text class="node-title" x="486" y="315">Specialist</text>
+                <text class="node-copy" x="486" y="335">deep tool</text>
+                <rect class="node risk" x="222" y="306" width="96" height="50" rx="8"></rect>
+                <text class="node-title" x="270" y="337">Fallback</text>
+              </svg>
+            </figure>
           </div>
         </section>
 
-        <section class="slide" id="slide-5" data-title="Consulting Offer">
-          <div class="slide-grid">
+        <section class="slide" id="slide-5" data-title="Execution Flow">
+          <div class="slide-grid slide-grid-wide">
             <div>
               <p class="section-kicker">5 / 10</p>
-              <h2>The consulting offer</h2>
+              <h2>Execution is a traceable flow</h2>
               <p class="lede">
-                We install a narrow, client-safe operating loop around one workflow that already
-                hurts: review, triage, runbook upkeep, onboarding, or delivery reporting.
+                OpenClaw makes agent work inspectable by turning a request into a bounded execution
+                trace: intake, context assembly, planning, delegation, action, verification, and
+                durable capture.
               </p>
-              <div class="offer-stack">
-                <article>
-                  <span>1</span>
-                  <div>
-                    <h3>Workflow diagnosis</h3>
-                    <p>Map the current steps, delays, data boundaries, and approval owners.</p>
-                  </div>
-                </article>
-                <article>
-                  <span>2</span>
-                  <div>
-                    <h3>Agent operating model</h3>
-                    <p>Configure the loop, prompts, tools, memory rules, refusal cases, and evidence format.</p>
-                  </div>
-                </article>
-                <article>
-                  <span>3</span>
-                  <div>
-                    <h3>Measured pilot</h3>
-                    <p>Run representative cases, compare baseline vs. pilot, and decide whether to expand.</p>
-                  </div>
-                </article>
+              <ol class="number-stream">
+                <li>Normalize the task into intent, constraints, and side-effect class.</li>
+                <li>Assemble only the context the harness policy permits.</li>
+                <li>Choose local execution, delegated subagents, or external capabilities.</li>
+                <li>Verify with the smallest meaningful gate before publishing state or effects.</li>
+              </ol>
+            </div>
+            <figure class="diagram-card" aria-label="Execution flow map">
+              <div class="flow-map">
+                <div class="flow-step input">Intake</div>
+                <div class="flow-arrow"></div>
+                <div class="flow-step storage">Context</div>
+                <div class="flow-arrow"></div>
+                <div class="flow-step process">Plan</div>
+                <div class="flow-arrow"></div>
+                <div class="flow-step model">Delegate</div>
+                <div class="flow-arrow"></div>
+                <div class="flow-step external">Act</div>
+                <div class="flow-arrow"></div>
+                <div class="flow-step risk">Verify</div>
+                <div class="flow-arrow"></div>
+                <div class="flow-step output">Publish / log</div>
               </div>
-            </div>
-            <div class="panel value-panel">
-              <p class="panel-label">Deliverables</p>
-              <ul class="fact-list">
-                <li>Approved workflow map</li>
-                <li>Guardrail and escalation matrix</li>
-                <li>Working static/local pilot setup</li>
-                <li>Acceptance checks and evidence packet</li>
-                <li>Decision readout with next-step recommendation</li>
-              </ul>
-            </div>
+            </figure>
           </div>
         </section>
 
-        <section class="slide" id="slide-6" data-title="Pilot Plan">
+        <section class="slide" id="slide-6" data-title="Trust Boundary">
           <div class="slide-grid">
             <div>
               <p class="section-kicker">6 / 10</p>
-              <h2>Two-week pilot plan</h2>
-              <div class="timeline">
-                <article>
-                  <span>Days 1-2</span>
-                  <h3>Select the workflow</h3>
-                  <p>Pick one measurable workflow and define data, approval, and success boundaries.</p>
-                </article>
-                <article>
-                  <span>Days 3-5</span>
-                  <h3>Build the loop</h3>
-                  <p>Connect the local workspace, templates, checks, memory, and human gates.</p>
-                </article>
-                <article>
-                  <span>Days 6-8</span>
-                  <h3>Run real cases</h3>
-                  <p>Use representative PRs, incidents, docs, or reports and preserve the evidence.</p>
-                </article>
-                <article>
-                  <span>Days 9-10</span>
-                  <h3>Decide</h3>
-                  <p>Review metric movement, risk events, user friction, and expansion readiness.</p>
-                </article>
-              </div>
-            </div>
-            <div class="panel metric-panel">
-              <p class="panel-label">Good pilot metrics</p>
-              <ul class="fact-list">
-                <li>Time to first useful review finding</li>
-                <li>Incident time to credible hypothesis</li>
-                <li>Context reload time after handoff</li>
-                <li>Decision capture rate</li>
-                <li>Unsafe action prevented or escalated</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section class="slide" id="slide-7" data-title="Controls">
-          <div class="slide-grid">
-            <div>
-              <p class="section-kicker">7 / 10</p>
-              <h2>Controls before autonomy</h2>
+              <h2>Trust boundaries are first-class</h2>
               <p class="lede">
-                The buyer should trust the operating model before trusting the agent. That means
-                the pilot starts with explicit defaults, not implied good behavior.
+                The runtime distinguishes local inspection from external effect. Private workspace
+                reads, tool execution, connector calls, messaging, and irreversible operations sit in
+                different zones with different consent and audit requirements.
               </p>
               <div class="control-table">
-                <div class="control-row control-head">
-                  <span>Default allowed</span>
-                  <span>Approval required</span>
-                  <span>Never autonomous</span>
-                </div>
-                <div class="control-row">
-                  <span>Read files and gather context</span>
-                  <span>Post to client channels</span>
-                  <span>Production mutations</span>
-                </div>
-                <div class="control-row">
-                  <span>Run local checks in scoped workspaces</span>
-                  <span>Use sensitive dashboards or logs</span>
-                  <span>Credential disclosure</span>
-                </div>
-                <div class="control-row">
-                  <span>Draft findings with evidence</span>
-                  <span>Schedule recurring client checks</span>
-                  <span>Legal or commercial commitments</span>
-                </div>
+                <div class="control-row control-head"><span>Zone</span><span>Examples</span><span>Runtime behavior</span></div>
+                <div class="control-row"><span>Local private</span><span>Files, logs, workspace state</span><span>Scoped read/write policy</span></div>
+                <div class="control-row"><span>External connector</span><span>GitHub, Linear, email, Slack</span><span>Identity and action gates</span></div>
+                <div class="control-row"><span>Irreversible effect</span><span>Posting, deleting, purchasing, deploying</span><span>Human approval required</span></div>
               </div>
             </div>
-            <div class="panel warning-panel">
-              <p class="panel-label">Control principle</p>
-              <h3>Every risky action needs an owner.</h3>
-              <p>
-                If nobody can approve it, audit it, or roll it back, it does not belong in the first
-                pilot.
-              </p>
-            </div>
+            <figure class="diagram-card compact-diagram" aria-label="Trust boundary diagram">
+              <svg class="diagram-svg" viewBox="0 0 560 390" role="img" aria-labelledby="trust-title">
+                <title id="trust-title">Local private zone, connector zone, and irreversible action zone separated by approval barrier</title>
+                <defs>
+                  <marker id="arrow-trust" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+                    <path d="M0,0 L0,6 L9,3 z" fill="#36515b"></path>
+                  </marker>
+                </defs>
+                <path class="connector" d="M128 194 H236" marker-end="url(#arrow-trust)"></path>
+                <path class="connector" d="M324 194 H418" marker-end="url(#arrow-trust)"></path>
+                <path class="connector dashed" d="M374 82 V306"></path>
+                <text class="boundary-label" x="388" y="92">approval barrier</text>
+                <rect class="trust-zone local" x="24" y="82" width="134" height="224" rx="10"></rect>
+                <text class="zone-title" x="91" y="124">Local</text>
+                <text class="zone-copy" x="91" y="155">workspace</text>
+                <text class="zone-copy" x="91" y="180">memory</text>
+                <text class="zone-copy" x="91" y="205">browser</text>
+                <text class="zone-copy" x="91" y="230">nodes</text>
+                <rect class="node process" x="226" y="152" width="108" height="84" rx="8"></rect>
+                <text class="node-title" x="280" y="187">Harness</text>
+                <text class="node-copy" x="280" y="209">policy check</text>
+                <rect class="trust-zone connector-zone" x="416" y="92" width="116" height="84" rx="10"></rect>
+                <text class="zone-title" x="474" y="126">Connector</text>
+                <text class="zone-copy" x="474" y="150">API effect</text>
+                <rect class="trust-zone irreversible" x="416" y="212" width="116" height="84" rx="10"></rect>
+                <text class="zone-title" x="474" y="246">External</text>
+                <text class="zone-copy" x="474" y="270">side effect</text>
+              </svg>
+            </figure>
           </div>
         </section>
 
-        <section class="slide" id="slide-8" data-title="Proof">
+        <section class="slide" id="slide-7" data-title="Nodes">
+          <div class="slide-grid slide-grid-wide">
+            <div>
+              <p class="section-kicker">7 / 10</p>
+              <h2>Nodes expose device capabilities under policy</h2>
+              <p class="lede">
+                OpenClaw can treat phones, screens, browsers, cameras, files, and messaging surfaces
+                as addressable capabilities. The important property is not breadth; it is that each
+                capability is mediated by explicit permissions and a task-specific invocation path.
+              </p>
+              <div class="capability-grid">
+                <article><span>Screen</span><p>Observe UI state, record bounded evidence, inspect rendered artifacts.</p></article>
+                <article><span>Camera</span><p>Capture operator-approved physical context or device state.</p></article>
+                <article><span>Browser</span><p>Use sessions, screenshots, form state, and DOM snapshots.</p></article>
+                <article><span>Messages</span><p>Read, draft, or reply only through connector rules and approvals.</p></article>
+              </div>
+            </div>
+            <figure class="diagram-card" aria-label="Multi-node device flow">
+              <svg class="diagram-svg" viewBox="0 0 760 390" role="img" aria-labelledby="nodes-title">
+                <title id="nodes-title">OpenClaw mediates multiple node capabilities through a runtime gateway</title>
+                <defs>
+                  <marker id="arrow-node" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+                    <path d="M0,0 L0,6 L9,3 z" fill="#36515b"></path>
+                  </marker>
+                </defs>
+                <path class="connector" d="M236 195 H332" marker-end="url(#arrow-node)"></path>
+                <path class="connector" d="M428 170 C494 72 558 66 628 92" marker-end="url(#arrow-node)"></path>
+                <path class="connector" d="M444 195 H620" marker-end="url(#arrow-node)"></path>
+                <path class="connector" d="M428 220 C494 318 558 324 628 298" marker-end="url(#arrow-node)"></path>
+                <rect class="node process" x="42" y="144" width="194" height="102" rx="10"></rect>
+                <text class="node-title big" x="139" y="182">OpenClaw runtime</text>
+                <text class="node-copy" x="139" y="208">policy / routing / trace</text>
+                <rect class="node output" x="332" y="150" width="112" height="90" rx="8"></rect>
+                <text class="node-title" x="388" y="188">Gateway</text>
+                <text class="node-copy" x="388" y="211">node auth</text>
+                <rect class="node external" x="620" y="52" width="102" height="76" rx="8"></rect>
+                <text class="node-title" x="671" y="84">Phone</text>
+                <text class="node-copy" x="671" y="106">camera / files</text>
+                <rect class="node external" x="620" y="157" width="102" height="76" rx="8"></rect>
+                <text class="node-title" x="671" y="189">Browser</text>
+                <text class="node-copy" x="671" y="211">DOM / screen</text>
+                <rect class="node external" x="620" y="262" width="102" height="76" rx="8"></rect>
+                <text class="node-title" x="671" y="294">Messages</text>
+                <text class="node-copy" x="671" y="316">draft / send</text>
+              </svg>
+            </figure>
+          </div>
+        </section>
+
+        <section class="slide" id="slide-8" data-title="Persistence">
           <div class="slide-grid">
             <div>
               <p class="section-kicker">8 / 10</p>
-              <h2>Proof buyers can inspect</h2>
+              <h2>Persistence separates trace from memory</h2>
               <p class="lede">
-                A serious pilot should leave receipts. The goal is not to claim magic; it is to show
-                where time moved, where quality improved, and where the system refused to act.
+                Not every token belongs in long-term memory. OpenClaw keeps raw task traces, session
+                state, daily notes, durable decisions, and curated memory as distinct persistence
+                layers with different promotion rules.
               </p>
-              <div class="proof-grid">
-                <article class="proof-item">
-                  <span>Before / after</span>
-                  <p>Baseline timing compared with pilot timing on the same workflow type.</p>
-                </article>
-                <article class="proof-item">
-                  <span>Evidence packet</span>
-                  <p>Inputs, commands, checks, findings, approvals, and open uncertainties.</p>
-                </article>
-                <article class="proof-item">
-                  <span>Risk log</span>
-                  <p>Escalations, blocked actions, permission failures, and policy adjustments.</p>
-                </article>
-                <article class="proof-item">
-                  <span>Reusable assets</span>
-                  <p>Templates, memory rules, acceptance checks, and handoff notes.</p>
-                </article>
+              <div class="definition-list">
+                <p><strong>Trace:</strong> commands, tool outputs, diffs, screenshots, checks, and temporary reasoning artifacts.</p>
+                <p><strong>Session state:</strong> active task plan, agent roles, open handles, pending approvals.</p>
+                <p><strong>Daily log:</strong> factual events and work summaries worth retaining for near-term continuity.</p>
+                <p><strong>Curated memory:</strong> durable preferences, decisions, lessons, and operating constraints.</p>
               </div>
             </div>
-            <div class="panel">
-              <p class="panel-label">Example evidence from this deck</p>
-              <p>
-                This public deck remains a static GitHub Pages site. The local workflow can be
-                checked with JavaScript syntax validation, whitespace checks, and browser preview
-                screenshots before publishing.
-              </p>
-            </div>
+            <figure class="diagram-card compact-diagram" aria-label="Persistence promotion model">
+              <div class="memory-pyramid">
+                <div class="memory-tier durable">Curated memory</div>
+                <div class="memory-tier decision">Decisions + lessons</div>
+                <div class="memory-tier daily">Daily logs</div>
+                <div class="memory-tier session">Session state</div>
+                <div class="memory-tier trace">Task trace</div>
+              </div>
+            </figure>
           </div>
         </section>
 
-        <section class="slide" id="slide-9" data-title="Best First Workflows">
-          <div class="slide-grid">
+        <section class="slide" id="slide-9" data-title="Failure Model">
+          <div class="slide-grid slide-grid-wide">
             <div>
               <p class="section-kicker">9 / 10</p>
-              <h2>Where to start</h2>
-              <div class="use-case-rail">
-                <article class="use-case">
-                  <h3>PR review preparation</h3>
-                  <p>Gather diff, intent, tests, project rules, and likely risk areas before human review.</p>
-                </article>
-                <article class="use-case">
-                  <h3>Incident triage support</h3>
-                  <p>Collect signals across logs, recent changes, docs, and dashboards into a first hypothesis packet.</p>
-                </article>
-                <article class="use-case">
-                  <h3>Runbook and docs upkeep</h3>
-                  <p>Capture what changed during real work and turn it into durable operational knowledge.</p>
-                </article>
-                <article class="use-case">
-                  <h3>Consultant handoff</h3>
-                  <p>Reduce reload time when a project changes hands or a client returns weeks later.</p>
-                </article>
+              <h2>Failure is modeled, not hand-waved</h2>
+              <p class="lede">
+                An agent runtime has to assume hallucination, stale state, tool failure, adversarial
+                content, and accidental side effects. The harness contains those failures by narrowing
+                scope, preserving evidence, and requiring validation before trust is spent.
+              </p>
+              <div class="failure-grid">
+                <article><h3>Hallucination</h3><p>Evidence-required claims, citations to local outputs, refusal on missing facts.</p></article>
+                <article><h3>Tool error</h3><p>Exit-code checks, bounded retries, surfaced uncertainty, no hidden mutation.</p></article>
+                <article><h3>Stale state</h3><p>Fresh reads before decisions, hash navigation, explicit timestamps and source age.</p></article>
+                <article><h3>Prompt injection</h3><p>Context provenance, instruction hierarchy, connector-specific trust boundaries.</p></article>
               </div>
             </div>
-            <div class="panel value-panel">
-              <p class="panel-label">Not first</p>
-              <p>
-                Do not begin with autonomous production changes, broad compliance statements, or
-                client-facing commitments. Start where evidence gathering is valuable and the human
-                remains the decision-maker.
-              </p>
-            </div>
+            <figure class="diagram-card" aria-label="Failure containment loop">
+              <svg class="diagram-svg" viewBox="0 0 760 390" role="img" aria-labelledby="failure-title">
+                <title id="failure-title">Failure containment loop from suspected failure to gate, evidence, mitigation, and logged outcome</title>
+                <defs>
+                  <marker id="arrow-failure" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+                    <path d="M0,0 L0,6 L9,3 z" fill="#36515b"></path>
+                  </marker>
+                </defs>
+                <path class="connector" d="M170 195 H282" marker-end="url(#arrow-failure)"></path>
+                <path class="connector" d="M402 195 H514" marker-end="url(#arrow-failure)"></path>
+                <path class="connector" d="M574 150 C552 62 228 62 186 148" marker-end="url(#arrow-failure)"></path>
+                <path class="connector dashed" d="M574 240 C552 330 228 330 186 242" marker-end="url(#arrow-failure)"></path>
+                <rect class="node risk" x="56" y="148" width="132" height="94" rx="8"></rect>
+                <text class="node-title" x="122" y="184">Suspect</text>
+                <text class="node-copy" x="122" y="207">failure mode</text>
+                <rect class="node process" x="282" y="148" width="120" height="94" rx="8"></rect>
+                <text class="node-title" x="342" y="184">Gate</text>
+                <text class="node-copy" x="342" y="207">pause / scope</text>
+                <rect class="node storage" x="514" y="116" width="132" height="76" rx="8"></rect>
+                <text class="node-title" x="580" y="148">Evidence</text>
+                <text class="node-copy" x="580" y="170">source / check</text>
+                <rect class="node output" x="514" y="220" width="132" height="76" rx="8"></rect>
+                <text class="node-title" x="580" y="252">Mitigate</text>
+                <text class="node-copy" x="580" y="274">verify / log</text>
+              </svg>
+            </figure>
           </div>
         </section>
 
-        <section class="slide" id="slide-10" data-title="CTA">
+        <section class="slide" id="slide-10" data-title="Operating Entity">
           <div class="slide-grid slide-grid-hero">
             <div>
               <p class="section-kicker">10 / 10</p>
-              <h2>Bring one workflow that hurts</h2>
+              <h2>From chat endpoint to operating entity</h2>
               <p class="lede">
-                The right first conversation is concrete: what workflow wastes expert time, who owns
-                approval, what data is in bounds, and what metric would justify keeping the loop.
+                OpenClaw matters because it gives models the missing operational substrate: a harness,
+                a permission system, a memory model, schedulable work, inspectable state, device and
+                connector drivers, and verification before external action.
               </p>
-              <ol class="number-stream compact">
-                <li>Name the workflow and the current failure mode.</li>
-                <li>Choose the human approval owner.</li>
-                <li>Define the metric and the stop conditions.</li>
-                <li>Run the pilot on real cases, then decide.</li>
-              </ol>
+              <div class="closing-model">
+                <span>Model capability</span>
+                <span>+</span>
+                <span>Harness boundary</span>
+                <span>+</span>
+                <span>Agent OS runtime</span>
+                <span>=</span>
+                <span>Inspectable work</span>
+              </div>
             </div>
             <div class="panel closing-panel">
-              <p class="panel-label">Call to action</p>
-              <h3>Book a two-week OpenClaw pilot.</h3>
+              <p class="panel-label">Thesis</p>
+              <h3>Agents become credible when they become accountable.</h3>
               <p>
-                Best fit: engineering teams that already use AI informally and now need a controlled,
-                measurable way to bring it into delivery work.
+                The showcase is not a promise of autonomy. It is a concrete model for turning LLMs,
+                tools, local context, remote capabilities, and human approval into a runtime that
+                skilled practitioners can inspect, extend, and constrain.
               </p>
-              <p class="closing-line">Contact: <a href="https://github.com/Nosp1">github.com/Nosp1</a></p>
+              <p class="closing-line">OpenClaw: agent OS for multi-model work.</p>
             </div>
           </div>
         </section>
@@ -403,7 +484,7 @@
         <div class="status">
           <span id="slideCounter">1 / 10</span>
           <span class="status-divider"></span>
-          <span id="slideTitle">Client Outcome</span>
+          <span id="slideTitle">System Model</span>
         </div>
         <button type="button" class="nav-button" id="nextButton" aria-label="Next slide">Next</button>
       </footer>
