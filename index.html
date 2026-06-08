@@ -4,6 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OpenClaw for Software Engineering Consulting</title>
+    <meta
+      name="description"
+      content="A practical presentation on using OpenClaw as a local agent operating layer for software engineering consulting workflows."
+    />
+    <meta property="og:title" content="OpenClaw for Software Engineering Consulting" />
+    <meta
+      property="og:description"
+      content="How local agent runtimes can support code review, incident triage, documentation, research, and project continuity with human gates."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://argos-odysseus.github.io/openclaw-consulting-presentation/" />
+    <meta name="theme-color" content="#0f6c67" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -11,11 +23,11 @@
       <header class="topbar">
         <div>
           <p class="eyebrow">OpenClaw Consulting Presentation</p>
-          <h1>OpenClaw as a practical operating layer for software engineering consulting</h1>
+          <h1>A local agent runtime for verified consulting workflows</h1>
         </div>
         <div class="topbar-meta">
-          <p>Static deck for GitHub Pages</p>
-          <p>Local-first, client-safe, workflow-oriented</p>
+          <p>Code review, incident triage, project memory, and delivery follow-through</p>
+          <p>Local-first, permissioned, and designed around human gates</p>
         </div>
       </header>
 
@@ -23,17 +35,15 @@
         <section class="slide is-active" id="slide-1" data-title="What OpenClaw Is">
           <div class="slide-grid slide-grid-hero">
             <div>
-              <p class="section-kicker">1 / 10</p>
-              <h2>What OpenClaw is</h2>
+              <p class="section-kicker">1 / 11</p>
+              <h2>From chat to verified work</h2>
               <p class="lede">
-                OpenClaw is not another chat UI. It is a local, tool-using agent runtime with
-                channels, memory, schedules, devices, browser automation, and explicit safety
-                controls.
+                OpenClaw turns AI from a drafting surface into a local operating layer for
+                consulting work: review, triage, verification, documentation, and durable memory.
               </p>
               <p>
-                For consulting, that matters because delivery work is rarely “answer one question.”
-                It is review, retrieval, follow-up, tool use, documentation, and continuity across
-                sessions and people.
+                The core loop is simple: intake, gather context, execute with scoped tools, verify
+                the result, deliver it, and capture the lesson so the next consultant starts ahead.
               </p>
             </div>
             <div class="diagram panel">
@@ -41,8 +51,8 @@
                 <div class="stack-layer">Consultant goals</div>
                 <div class="stack-layer">Agent sessions and subagents</div>
                 <div class="stack-layer">Tools, browser, scripts, files, memory</div>
-                <div class="stack-layer">Channels, schedules, devices, permissions</div>
-                <div class="stack-layer">Local runtime with explicit controls</div>
+                <div class="stack-layer">Schedules, channels, devices, permissions</div>
+                <div class="stack-layer">Local runtime with audit and refusal gates</div>
               </div>
             </div>
           </div>
@@ -54,23 +64,23 @@
         <section class="slide" id="slide-2" data-title="Why It Matters">
           <div class="slide-grid">
             <div>
-              <p class="section-kicker">2 / 10</p>
+              <p class="section-kicker">2 / 11</p>
               <h2>Why this matters to consultants</h2>
               <div class="bullet-panel">
-                <p>Consulting work is fragmented across repos, tickets, channels, documents, and incidents.</p>
-                <p>Knowledge loss between projects and people is expensive, especially in small teams.</p>
-                <p>Most “AI assistant” setups help with drafting but stop short of operational follow-through.</p>
-                <p>OpenClaw closes that gap by binding language models to scoped tools, memory, and repeatable workflows.</p>
+                <p>Reduce review latency by letting an agent gather diffs, comments, and test signals before the consultant starts.</p>
+                <p>Preserve project memory so decisions, lessons, and runbooks survive handoffs.</p>
+                <p>Make AI tool use auditable instead of burying it in one-off prompt transcripts.</p>
+                <p>Route work back through human gates for merge, release, external posting, and sensitive client commitments.</p>
               </div>
             </div>
             <div class="comparison-strip">
               <div class="compare-card">
-                <h3>Typical assistant</h3>
+                <h3>Chat / IDE assistant</h3>
                 <ul>
-                  <li>Good at one-off prompts</li>
-                  <li>Weak continuity</li>
-                  <li>Little tool discipline</li>
-                  <li>Often unsafe by default</li>
+                  <li>Strong drafting and local code help</li>
+                  <li>Often weak cross-channel continuity</li>
+                  <li>Audit trail depends on user discipline</li>
+                  <li>Approvals are usually outside the tool</li>
                 </ul>
               </div>
               <div class="compare-card compare-card-accent">
@@ -79,7 +89,7 @@
                   <li>Session-aware execution</li>
                   <li>Structured memory and KB hooks</li>
                   <li>Agent + tool + channel orchestration</li>
-                  <li>Human gates where they matter</li>
+                  <li>Explicit gates for risky actions</li>
                 </ul>
               </div>
             </div>
@@ -89,7 +99,7 @@
         <section class="slide" id="slide-3" data-title="Core Capabilities">
           <div class="slide-grid">
             <div>
-              <p class="section-kicker">3 / 10</p>
+              <p class="section-kicker">3 / 11</p>
               <h2>Core capabilities in one operating model</h2>
               <div class="capability-matrix">
                 <article class="mini-card">
@@ -102,7 +112,7 @@
                 </article>
                 <article class="mini-card">
                   <h3>Schedules</h3>
-                  <p>Heartbeat and cron jobs turn “remember to check” into a real trigger.</p>
+                  <p>Cron jobs and heartbeats turn recurring checks into explicit triggers with visible run history.</p>
                 </article>
                 <article class="mini-card">
                   <h3>Devices</h3>
@@ -124,11 +134,11 @@
                 <li>Local dashboard and loopback gateway model</li>
                 <li>Memory plugin enabled</li>
                 <li>Browser and automation tooling available</li>
-                <li>Channel support exists even when not all channels are configured</li>
+                <li>Channel integrations can be enabled per consulting environment</li>
                 <li>Static files, scripts, and reports live in the workspace beside the agent</li>
               </ul>
               <p class="fine-print">
-                This presentation uses implementation reality, not product brochure language.
+                Scheduled workflows still need watchdogs, failure alerts, and stateless execution patterns before they carry client-critical obligations.
               </p>
             </div>
           </div>
@@ -137,49 +147,92 @@
         <section class="slide" id="slide-4" data-title="Consulting Use Cases">
           <div class="slide-grid">
             <div>
-              <p class="section-kicker">4 / 10</p>
-              <h2>Concrete consulting use cases</h2>
+              <p class="section-kicker">4 / 11</p>
+              <h2>Week-one mission loop</h2>
               <div class="use-case-rail">
                 <article class="use-case">
-                  <h3>PR review and implementation support</h3>
-                  <p>Fetch context, inspect diffs, run tests, leave findings, and spin up targeted fix workers.</p>
+                  <h3>09:12 - Client asks for PR review</h3>
+                  <p>The agent gathers the diff, related comments, test status, and local project rules.</p>
                 </article>
                 <article class="use-case">
-                  <h3>Incident triage</h3>
-                  <p>Pull logs, inspect dashboards, summarize probable causes, and collect the next human actions.</p>
+                  <h3>09:18 - Scoped execution</h3>
+                  <p>Read-only inspection runs first; tests or browser checks run only inside the agreed workspace.</p>
                 </article>
                 <article class="use-case">
-                  <h3>Documentation and knowledge capture</h3>
-                  <p>Turn decisions, lessons, and runbooks into durable project memory instead of chat residue.</p>
+                  <h3>09:32 - Consultant gets findings</h3>
+                  <p>P1/P2 risks, evidence, and uncertainty are presented before anything is posted externally.</p>
                 </article>
                 <article class="use-case">
-                  <h3>Research, demos, and prototypes</h3>
-                  <p>Run bounded research, create small proofs, and preserve evidence, assumptions, and outputs.</p>
+                  <h3>09:40 - Decision is captured</h3>
+                  <p>The final answer, tests, and lesson go into the project KB so the next review starts warmer.</p>
                 </article>
               </div>
             </div>
             <div class="panel">
-              <h3>Why this is stronger than generic prompting</h3>
+              <h3>Core loop</h3>
               <div class="flow-list">
-                <div>Question arrives</div>
-                <div>Relevant files, issues, docs, and browser state are gathered</div>
-                <div>Agent executes with scoped tools</div>
-                <div>Output is verified, logged, and routed back to the consultant</div>
+                <div>Intake</div>
+                <div>Context</div>
+                <div>Execute</div>
+                <div>Verify</div>
+                <div>Deliver</div>
+                <div>Capture</div>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="slide" id="slide-5" data-title="Workflow Example">
+        <section class="slide" id="slide-5" data-title="Proof Point">
           <div class="slide-grid">
             <div>
-              <p class="section-kicker">5 / 10</p>
+              <p class="section-kicker">5 / 11</p>
+              <h2>Proof from this deck</h2>
+              <p class="lede">
+                This presentation itself was built as an OpenClaw workflow: create, deploy,
+                verify, review with agents, improve, and log the result.
+              </p>
+              <div class="proof-grid">
+                <article class="proof-item">
+                  <span>Build</span>
+                  <p>Static HTML/CSS/JS deck created in a local workspace.</p>
+                </article>
+                <article class="proof-item">
+                  <span>Deploy</span>
+                  <p>Published to a public GitHub Pages repo from a clean commit.</p>
+                </article>
+                <article class="proof-item">
+                  <span>Verify</span>
+                  <p>JS syntax, whitespace, live asset checks, and browser passes ran before handoff.</p>
+                </article>
+                <article class="proof-item">
+                  <span>Improve</span>
+                  <p>Four agent reviews fed this revision: regulator, competitor, game design, and $0-budget.</p>
+                </article>
+              </div>
+            </div>
+            <div class="panel">
+              <h3>What buyers should ask for</h3>
+              <ul class="fact-list">
+                <li>Redacted workflow transcript</li>
+                <li>Before/after timing for one task</li>
+                <li>Policy and approval matrix</li>
+                <li>Audit receipt for every external action</li>
+                <li>Risk register with known limitations</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" id="slide-6" data-title="Workflow Example">
+          <div class="slide-grid">
+            <div>
+              <p class="section-kicker">6 / 11</p>
               <h2>A realistic consulting workflow</h2>
               <ol class="number-stream">
-                <li>Client asks for a production incident assessment or code review.</li>
+                <li>Client asks for a production incident assessment or PR review.</li>
                 <li>Main session classifies the task and delegates research or verification to subagents.</li>
-                <li>Workers inspect code, browser state, logs, and documents in parallel.</li>
-                <li>Main session consolidates findings, runs checks, and produces a client-safe answer.</li>
+                <li>Workers inspect code, browser state, logs, and documents in parallel under read-only defaults.</li>
+                <li>Main session consolidates findings, runs checks, and produces a client-safe answer for human approval.</li>
                 <li>Important decisions or lessons are written back into the project knowledge base.</li>
               </ol>
             </div>
@@ -199,17 +252,17 @@
           </div>
         </section>
 
-        <section class="slide" id="slide-6" data-title="Channels And Continuity">
+        <section class="slide" id="slide-7" data-title="Channels And Continuity">
           <div class="slide-grid">
             <div>
-              <p class="section-kicker">6 / 10</p>
+              <p class="section-kicker">7 / 11</p>
               <h2>Channels, schedules, and continuity</h2>
               <p class="lede">
                 The practical advantage is not just that the agent can answer. It can keep operating
                 in bounded ways between conversations.
               </p>
               <div class="bullet-panel">
-                <p>Scheduled checks for PRs, error queues, docs drift, or operational hygiene.</p>
+                <p>Scheduled checks for PRs, error queues, docs drift, or operational hygiene, with failure reporting rather than silent trust.</p>
                 <p>Client-specific agents with their own memory, rules, and workflow boundaries.</p>
                 <p>Messaging integrations for direct delivery where the work already happens.</p>
                 <p>Project continuity when one consultant hands work to another or when a client returns weeks later.</p>
@@ -229,10 +282,10 @@
           </div>
         </section>
 
-        <section class="slide" id="slide-7" data-title="Adoption Model">
+        <section class="slide" id="slide-8" data-title="Adoption Model">
           <div class="slide-grid">
             <div>
-              <p class="section-kicker">7 / 10</p>
+              <p class="section-kicker">8 / 11</p>
               <h2>Adoption model</h2>
               <div class="maturity-track">
                 <article class="track-step">
@@ -243,7 +296,7 @@
                 <article class="track-step">
                   <span class="step-tag">Phase 2</span>
                   <h3>Team pilot</h3>
-                  <p>Shared conventions, scoped subagents, standard operating prompts, scheduled checks, measurable time savings.</p>
+                  <p>Shared conventions, scoped subagents, standard prompts, scheduled checks, and baseline/after metrics.</p>
                 </article>
                 <article class="track-step">
                   <span class="step-tag">Phase 3</span>
@@ -266,52 +319,55 @@
           </div>
         </section>
 
-        <section class="slide" id="slide-8" data-title="Risk And Guardrails">
+        <section class="slide" id="slide-9" data-title="Risk And Guardrails">
           <div class="slide-grid">
             <div>
-              <p class="section-kicker">8 / 10</p>
+              <p class="section-kicker">9 / 11</p>
               <h2>Risk and guardrails</h2>
-              <div class="guardrail-grid">
-                <article class="guardrail">
-                  <h3>Privacy</h3>
-                  <p>Prefer local runtime, explicit file scope, and client-specific separation.</p>
-                </article>
-                <article class="guardrail">
-                  <h3>Secrets</h3>
-                  <p>Do not expose raw credentials; route access through existing local secret stores and approvals.</p>
-                </article>
-                <article class="guardrail">
-                  <h3>External posting</h3>
-                  <p>No outbound email, chat, or public posting without a clear policy and approval path.</p>
-                </article>
-                <article class="guardrail">
-                  <h3>Tool permissions</h3>
-                  <p>Use least privilege. Some workflows stay read-only; some require explicit human elevation.</p>
-                </article>
-                <article class="guardrail">
-                  <h3>Audit trail</h3>
-                  <p>Keep command evidence, summaries, and knowledge-base entries for important decisions.</p>
-                </article>
-                <article class="guardrail">
-                  <h3>Human control</h3>
-                  <p>Agents review and prepare. Humans still own merge, release, and material external commitments.</p>
-                </article>
+              <div class="control-table">
+                <div class="control-row control-head">
+                  <span>Default</span>
+                  <span>Allowed with approval</span>
+                  <span>Never autonomous</span>
+                </div>
+                <div class="control-row">
+                  <span>Read-only inspection</span>
+                  <span>Posting findings to client channels</span>
+                  <span>Production mutation</span>
+                </div>
+                <div class="control-row">
+                  <span>Scoped workspace access</span>
+                  <span>Using sensitive logs or dashboards</span>
+                  <span>Credential disclosure</span>
+                </div>
+                <div class="control-row">
+                  <span>Evidence capture</span>
+                  <span>Running scheduled client checks</span>
+                  <span>Commercial or legal commitments</span>
+                </div>
               </div>
             </div>
             <div class="panel">
-              <h3>Credible position</h3>
+              <h3>Client onboarding checklist</h3>
+              <ul class="fact-list">
+                <li>Data classification and retention policy</li>
+                <li>Model/provider routing and network boundaries</li>
+                <li>Per-client workspace and memory separation</li>
+                <li>Approval matrix and refusal examples</li>
+                <li>Audit sample and rollback path</li>
+              </ul>
               <p>
-                OpenClaw is powerful enough to be useful and risky enough to require design. That is
-                exactly why it can become a serious consulting tool rather than a novelty.
+                OpenClaw is useful because it can act. That is also why the control model must be
+                designed before client-critical workflows depend on it.
               </p>
             </div>
           </div>
         </section>
 
-        <section class="slide" id="slide-9" data-title="Where It Fits">
+        <section class="slide" id="slide-10" data-title="Where It Fits">
           <div class="slide-grid">
             <div>
-              <p class="section-kicker">9 / 10</p>
+              <p class="section-kicker">10 / 11</p>
               <h2>Where it fits in a consulting business</h2>
               <div class="banded-list">
                 <div>
@@ -329,40 +385,42 @@
               </div>
             </div>
             <div class="panel">
-              <h3>Net effect</h3>
-              <p>
-                Consultants spend less time reloading context and more time applying judgment. The
-                system becomes a force multiplier for rigor, not a substitute for it.
-              </p>
+              <h3>Success metrics</h3>
+              <ul class="fact-list">
+                <li>Review turnaround time</li>
+                <li>Context reload time after handoff</li>
+                <li>Incident triage time to first useful hypothesis</li>
+                <li>Documentation freshness and decision capture rate</li>
+                <li>Number of prevented unsafe external actions</li>
+              </ul>
             </div>
           </div>
         </section>
 
-        <section class="slide" id="slide-10" data-title="Consulting Offer">
+        <section class="slide" id="slide-11" data-title="Consulting Offer">
           <div class="slide-grid slide-grid-hero">
             <div>
-              <p class="section-kicker">10 / 10</p>
-              <h2>Consulting offering</h2>
+              <p class="section-kicker">11 / 11</p>
+              <h2>Two-week pilot offer</h2>
               <p class="lede">
-                A practical OpenClaw adoption engagement should look like engineering enablement, not
-                software theater.
+                Start with one team, one workflow, and one measurable result. Do not roll this out
+                broadly until the gates and evidence trail are proven.
               </p>
               <ol class="number-stream compact">
-                <li>Discovery workshop: current delivery flow, pain points, trust boundaries.</li>
-                <li>Workflow mapping: identify repeatable high-value tasks and human gates.</li>
-                <li>Pilot agent setup: local runtime, scoped tools, memory model, reporting.</li>
-                <li>Governance: approval rules, audit expectations, client-safe usage policy.</li>
-                <li>Measurement: review latency, context reload time, incident response speed, documentation quality.</li>
+                <li>90-minute workflow audit and risk boundary review.</li>
+                <li>One pilot workflow configured, usually PR review or incident triage.</li>
+                <li>Guardrail policy: approvals, refusals, audit trail, and prohibited defaults.</li>
+                <li>Acceptance tests for the workflow and one redacted evidence packet.</li>
+                <li>Decision readout: continue, expand, or stop.</li>
               </ol>
             </div>
             <div class="panel closing-panel">
-              <h3>Positioning</h3>
+              <h3>CTA</h3>
               <p>
-                OpenClaw is best introduced as an operating layer for serious engineering work. The
-                value is compound: better continuity, better execution, better evidence, and fewer
-                avoidable context switches.
+                Book the pilot when you can name a real workflow, the human who owns approval, and
+                the metric that would make the experiment worth keeping.
               </p>
-              <p class="closing-line">Useful when treated as infrastructure. Dangerous when treated as magic.</p>
+              <p class="closing-line">Contact: <a href="https://github.com/Nosp1">github.com/Nosp1</a></p>
             </div>
           </div>
         </section>
@@ -371,7 +429,7 @@
       <footer class="controls" aria-label="Presentation controls">
         <button type="button" class="nav-button" id="prevButton" aria-label="Previous slide">Previous</button>
         <div class="status">
-          <span id="slideCounter">1 / 10</span>
+          <span id="slideCounter">1 / 11</span>
           <span class="status-divider"></span>
           <span id="slideTitle">What OpenClaw Is</span>
         </div>
