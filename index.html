@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenClaw for Software Engineering Consulting</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="deck-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">OpenClaw Consulting Presentation</p>
+          <h1>OpenClaw as a practical operating layer for software engineering consulting</h1>
+        </div>
+        <div class="topbar-meta">
+          <p>Static deck for GitHub Pages</p>
+          <p>Local-first, client-safe, workflow-oriented</p>
+        </div>
+      </header>
+
+      <main class="deck" id="deck" aria-live="polite">
+        <section class="slide is-active" id="slide-1" data-title="What OpenClaw Is">
+          <div class="slide-grid slide-grid-hero">
+            <div>
+              <p class="section-kicker">1 / 10</p>
+              <h2>What OpenClaw is</h2>
+              <p class="lede">
+                OpenClaw is not another chat UI. It is a local, tool-using agent runtime with
+                channels, memory, schedules, devices, browser automation, and explicit safety
+                controls.
+              </p>
+              <p>
+                For consulting, that matters because delivery work is rarely “answer one question.”
+                It is review, retrieval, follow-up, tool use, documentation, and continuity across
+                sessions and people.
+              </p>
+            </div>
+            <div class="diagram panel">
+              <div class="stack-diagram">
+                <div class="stack-layer">Consultant goals</div>
+                <div class="stack-layer">Agent sessions and subagents</div>
+                <div class="stack-layer">Tools, browser, scripts, files, memory</div>
+                <div class="stack-layer">Channels, schedules, devices, permissions</div>
+                <div class="stack-layer">Local runtime with explicit controls</div>
+              </div>
+            </div>
+          </div>
+          <aside class="notes">
+            Lead with the difference between “AI as conversation” and “AI as operating layer.”
+          </aside>
+        </section>
+
+        <section class="slide" id="slide-2" data-title="Why It Matters">
+          <div class="slide-grid">
+            <div>
+              <p class="section-kicker">2 / 10</p>
+              <h2>Why this matters to consultants</h2>
+              <div class="bullet-panel">
+                <p>Consulting work is fragmented across repos, tickets, channels, documents, and incidents.</p>
+                <p>Knowledge loss between projects and people is expensive, especially in small teams.</p>
+                <p>Most “AI assistant” setups help with drafting but stop short of operational follow-through.</p>
+                <p>OpenClaw closes that gap by binding language models to scoped tools, memory, and repeatable workflows.</p>
+              </div>
+            </div>
+            <div class="comparison-strip">
+              <div class="compare-card">
+                <h3>Typical assistant</h3>
+                <ul>
+                  <li>Good at one-off prompts</li>
+                  <li>Weak continuity</li>
+                  <li>Little tool discipline</li>
+                  <li>Often unsafe by default</li>
+                </ul>
+              </div>
+              <div class="compare-card compare-card-accent">
+                <h3>OpenClaw model</h3>
+                <ul>
+                  <li>Session-aware execution</li>
+                  <li>Structured memory and KB hooks</li>
+                  <li>Agent + tool + channel orchestration</li>
+                  <li>Human gates where they matter</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" id="slide-3" data-title="Core Capabilities">
+          <div class="slide-grid">
+            <div>
+              <p class="section-kicker">3 / 10</p>
+              <h2>Core capabilities in one operating model</h2>
+              <div class="capability-matrix">
+                <article class="mini-card">
+                  <h3>Tools</h3>
+                  <p>Shell, files, APIs, browser, app connectors, image and research tools.</p>
+                </article>
+                <article class="mini-card">
+                  <h3>Channels</h3>
+                  <p>Works through chat surfaces instead of trapping work inside one UI.</p>
+                </article>
+                <article class="mini-card">
+                  <h3>Schedules</h3>
+                  <p>Heartbeat and cron jobs turn “remember to check” into a real trigger.</p>
+                </article>
+                <article class="mini-card">
+                  <h3>Devices</h3>
+                  <p>Node and browser automation extend the agent into concrete environments.</p>
+                </article>
+                <article class="mini-card">
+                  <h3>Memory / KB</h3>
+                  <p>Daily logs, indexed notes, and scoped recall reduce repeated rediscovery.</p>
+                </article>
+                <article class="mini-card">
+                  <h3>Subagents</h3>
+                  <p>Parallel workers handle bounded tasks without losing the main thread.</p>
+                </article>
+              </div>
+            </div>
+            <div class="panel">
+              <h3>Grounded in the current local setup</h3>
+              <ul class="fact-list">
+                <li>Local dashboard and loopback gateway model</li>
+                <li>Memory plugin enabled</li>
+                <li>Browser and automation tooling available</li>
+                <li>Channel support exists even when not all channels are configured</li>
+                <li>Static files, scripts, and reports live in the workspace beside the agent</li>
+              </ul>
+              <p class="fine-print">
+                This presentation uses implementation reality, not product brochure language.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" id="slide-4" data-title="Consulting Use Cases">
+          <div class="slide-grid">
+            <div>
+              <p class="section-kicker">4 / 10</p>
+              <h2>Concrete consulting use cases</h2>
+              <div class="use-case-rail">
+                <article class="use-case">
+                  <h3>PR review and implementation support</h3>
+                  <p>Fetch context, inspect diffs, run tests, leave findings, and spin up targeted fix workers.</p>
+                </article>
+                <article class="use-case">
+                  <h3>Incident triage</h3>
+                  <p>Pull logs, inspect dashboards, summarize probable causes, and collect the next human actions.</p>
+                </article>
+                <article class="use-case">
+                  <h3>Documentation and knowledge capture</h3>
+                  <p>Turn decisions, lessons, and runbooks into durable project memory instead of chat residue.</p>
+                </article>
+                <article class="use-case">
+                  <h3>Research, demos, and prototypes</h3>
+                  <p>Run bounded research, create small proofs, and preserve evidence, assumptions, and outputs.</p>
+                </article>
+              </div>
+            </div>
+            <div class="panel">
+              <h3>Why this is stronger than generic prompting</h3>
+              <div class="flow-list">
+                <div>Question arrives</div>
+                <div>Relevant files, issues, docs, and browser state are gathered</div>
+                <div>Agent executes with scoped tools</div>
+                <div>Output is verified, logged, and routed back to the consultant</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" id="slide-5" data-title="Workflow Example">
+          <div class="slide-grid">
+            <div>
+              <p class="section-kicker">5 / 10</p>
+              <h2>A realistic consulting workflow</h2>
+              <ol class="number-stream">
+                <li>Client asks for a production incident assessment or code review.</li>
+                <li>Main session classifies the task and delegates research or verification to subagents.</li>
+                <li>Workers inspect code, browser state, logs, and documents in parallel.</li>
+                <li>Main session consolidates findings, runs checks, and produces a client-safe answer.</li>
+                <li>Important decisions or lessons are written back into the project knowledge base.</li>
+              </ol>
+            </div>
+            <div class="diagram panel">
+              <div class="pipeline">
+                <div class="pipeline-step">Inbound task</div>
+                <div class="pipeline-arrow"></div>
+                <div class="pipeline-step">Context gathering</div>
+                <div class="pipeline-arrow"></div>
+                <div class="pipeline-step">Parallel subagents</div>
+                <div class="pipeline-arrow"></div>
+                <div class="pipeline-step">Verification</div>
+                <div class="pipeline-arrow"></div>
+                <div class="pipeline-step">Deliver + capture</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" id="slide-6" data-title="Channels And Continuity">
+          <div class="slide-grid">
+            <div>
+              <p class="section-kicker">6 / 10</p>
+              <h2>Channels, schedules, and continuity</h2>
+              <p class="lede">
+                The practical advantage is not just that the agent can answer. It can keep operating
+                in bounded ways between conversations.
+              </p>
+              <div class="bullet-panel">
+                <p>Scheduled checks for PRs, error queues, docs drift, or operational hygiene.</p>
+                <p>Client-specific agents with their own memory, rules, and workflow boundaries.</p>
+                <p>Messaging integrations for direct delivery where the work already happens.</p>
+                <p>Project continuity when one consultant hands work to another or when a client returns weeks later.</p>
+              </div>
+            </div>
+            <div class="panel">
+              <h3>Operating pattern</h3>
+              <div class="orbit-board">
+                <div class="orbit-center">Agent runtime</div>
+                <div class="orbit-node orbit-a">PR checks</div>
+                <div class="orbit-node orbit-b">Daily notes</div>
+                <div class="orbit-node orbit-c">Client threads</div>
+                <div class="orbit-node orbit-d">Research runs</div>
+                <div class="orbit-node orbit-e">Browser tasks</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" id="slide-7" data-title="Adoption Model">
+          <div class="slide-grid">
+            <div>
+              <p class="section-kicker">7 / 10</p>
+              <h2>Adoption model</h2>
+              <div class="maturity-track">
+                <article class="track-step">
+                  <span class="step-tag">Phase 1</span>
+                  <h3>Individual consultant</h3>
+                  <p>Personal workflow support, local knowledge capture, review help, lightweight research.</p>
+                </article>
+                <article class="track-step">
+                  <span class="step-tag">Phase 2</span>
+                  <h3>Team pilot</h3>
+                  <p>Shared conventions, scoped subagents, standard operating prompts, scheduled checks, measurable time savings.</p>
+                </article>
+                <article class="track-step">
+                  <span class="step-tag">Phase 3</span>
+                  <h3>Client-safe operating model</h3>
+                  <p>Per-client boundaries, explicit approvals, auditable workflows, controlled integrations, and human release ownership.</p>
+                </article>
+              </div>
+            </div>
+            <div class="panel">
+              <h3>Recommendation</h3>
+              <p>
+                Start small and local. The strongest early win is usually continuity and review
+                quality, not full autonomy.
+              </p>
+              <p>
+                Teams that skip straight to “deploy it everywhere” usually recreate the same trust
+                problems that made AI adoption stall in the first place.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" id="slide-8" data-title="Risk And Guardrails">
+          <div class="slide-grid">
+            <div>
+              <p class="section-kicker">8 / 10</p>
+              <h2>Risk and guardrails</h2>
+              <div class="guardrail-grid">
+                <article class="guardrail">
+                  <h3>Privacy</h3>
+                  <p>Prefer local runtime, explicit file scope, and client-specific separation.</p>
+                </article>
+                <article class="guardrail">
+                  <h3>Secrets</h3>
+                  <p>Do not expose raw credentials; route access through existing local secret stores and approvals.</p>
+                </article>
+                <article class="guardrail">
+                  <h3>External posting</h3>
+                  <p>No outbound email, chat, or public posting without a clear policy and approval path.</p>
+                </article>
+                <article class="guardrail">
+                  <h3>Tool permissions</h3>
+                  <p>Use least privilege. Some workflows stay read-only; some require explicit human elevation.</p>
+                </article>
+                <article class="guardrail">
+                  <h3>Audit trail</h3>
+                  <p>Keep command evidence, summaries, and knowledge-base entries for important decisions.</p>
+                </article>
+                <article class="guardrail">
+                  <h3>Human control</h3>
+                  <p>Agents review and prepare. Humans still own merge, release, and material external commitments.</p>
+                </article>
+              </div>
+            </div>
+            <div class="panel">
+              <h3>Credible position</h3>
+              <p>
+                OpenClaw is powerful enough to be useful and risky enough to require design. That is
+                exactly why it can become a serious consulting tool rather than a novelty.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" id="slide-9" data-title="Where It Fits">
+          <div class="slide-grid">
+            <div>
+              <p class="section-kicker">9 / 10</p>
+              <h2>Where it fits in a consulting business</h2>
+              <div class="banded-list">
+                <div>
+                  <h3>High-fit work</h3>
+                  <p>Code review, incident support, runbook maintenance, environment checks, research, prototypes, and onboarding continuity.</p>
+                </div>
+                <div>
+                  <h3>Needs tighter control</h3>
+                  <p>Production mutations, client messaging, procurement, compliance statements, and release actions.</p>
+                </div>
+                <div>
+                  <h3>Should stay human-led</h3>
+                  <p>Commercial commitments, final technical sign-off, sensitive stakeholder communication, and irreversible changes.</p>
+                </div>
+              </div>
+            </div>
+            <div class="panel">
+              <h3>Net effect</h3>
+              <p>
+                Consultants spend less time reloading context and more time applying judgment. The
+                system becomes a force multiplier for rigor, not a substitute for it.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" id="slide-10" data-title="Consulting Offer">
+          <div class="slide-grid slide-grid-hero">
+            <div>
+              <p class="section-kicker">10 / 10</p>
+              <h2>Consulting offering</h2>
+              <p class="lede">
+                A practical OpenClaw adoption engagement should look like engineering enablement, not
+                software theater.
+              </p>
+              <ol class="number-stream compact">
+                <li>Discovery workshop: current delivery flow, pain points, trust boundaries.</li>
+                <li>Workflow mapping: identify repeatable high-value tasks and human gates.</li>
+                <li>Pilot agent setup: local runtime, scoped tools, memory model, reporting.</li>
+                <li>Governance: approval rules, audit expectations, client-safe usage policy.</li>
+                <li>Measurement: review latency, context reload time, incident response speed, documentation quality.</li>
+              </ol>
+            </div>
+            <div class="panel closing-panel">
+              <h3>Positioning</h3>
+              <p>
+                OpenClaw is best introduced as an operating layer for serious engineering work. The
+                value is compound: better continuity, better execution, better evidence, and fewer
+                avoidable context switches.
+              </p>
+              <p class="closing-line">Useful when treated as infrastructure. Dangerous when treated as magic.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="controls" aria-label="Presentation controls">
+        <button type="button" class="nav-button" id="prevButton" aria-label="Previous slide">Previous</button>
+        <div class="status">
+          <span id="slideCounter">1 / 10</span>
+          <span class="status-divider"></span>
+          <span id="slideTitle">What OpenClaw Is</span>
+        </div>
+        <button type="button" class="nav-button" id="nextButton" aria-label="Next slide">Next</button>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
