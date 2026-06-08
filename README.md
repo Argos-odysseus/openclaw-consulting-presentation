@@ -1,6 +1,6 @@
 # OpenClaw Consulting Presentation
 
-Static GitHub Pages presentation explaining OpenClaw as a practical operating layer for software engineering consulting.
+Static GitHub Pages presentation pitching an OpenClaw consulting pilot for engineering teams.
 
 Live site:
 
@@ -8,9 +8,9 @@ https://argos-odysseus.github.io/openclaw-consulting-presentation/
 
 Audience:
 
-- Software engineering consultants
-- Consulting leaders evaluating agent-assisted delivery workflows
-- Teams that need AI support with explicit human gates, audit trails, and client-safe boundaries
+- Engineering leaders evaluating agent-assisted delivery workflows
+- Consulting buyers who need measurable review, triage, and handoff improvements
+- Teams that already use AI informally and now need explicit gates, evidence, and client-safe boundaries
 
 Scope:
 
