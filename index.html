@@ -253,21 +253,45 @@
               </ol>
             </div>
             <figure class="diagram-card" aria-label="Execution flow map">
-              <div class="flow-map">
-                <div class="flow-step input">Intake</div>
-                <div class="flow-arrow"></div>
-                <div class="flow-step storage">Context</div>
-                <div class="flow-arrow"></div>
-                <div class="flow-step process">Plan</div>
-                <div class="flow-arrow"></div>
-                <div class="flow-step model">Delegate</div>
-                <div class="flow-arrow"></div>
-                <div class="flow-step external">Act</div>
-                <div class="flow-arrow"></div>
-                <div class="flow-step risk">Verify</div>
-                <div class="flow-arrow"></div>
-                <div class="flow-step output">Publish / log</div>
-              </div>
+              <svg class="diagram-svg" viewBox="0 0 760 360" role="img" aria-labelledby="flow-title">
+                <title id="flow-title">Execution flow from intake to durable publish and log</title>
+                <defs>
+                  <marker id="flow-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#36515b" />
+                  </marker>
+                </defs>
+                <g fill="none" stroke="#36515b" stroke-width="3" marker-end="url(#flow-arrow)">
+                  <path d="M 170 110 H 238" />
+                  <path d="M 358 110 H 426" />
+                  <path d="M 546 110 H 614" />
+                  <path d="M 674 150 V 180 H 110 V 210" />
+                  <path d="M 170 250 H 238" />
+                  <path d="M 358 250 H 426" />
+                </g>
+                <g font-family="Inter, Arial, sans-serif" font-size="20" font-weight="850" text-anchor="middle" fill="#111820">
+                  <rect x="50" y="70" width="120" height="80" rx="7" fill="#e0edf0" stroke="#1b6e8c" />
+                  <text x="110" y="118">Intake</text>
+
+                  <rect x="238" y="70" width="120" height="80" rx="7" fill="#edf1eb" stroke="#607d62" />
+                  <text x="298" y="118">Context</text>
+
+                  <rect x="426" y="70" width="120" height="80" rx="7" fill="#e0edf0" stroke="#1b6e8c" />
+                  <text x="486" y="118">Plan</text>
+
+                  <rect x="614" y="70" width="120" height="80" rx="7" fill="#ece7f1" stroke="#70659c" />
+                  <text x="674" y="118">Delegate</text>
+
+                  <rect x="50" y="210" width="120" height="80" rx="7" fill="#f2e8d9" stroke="#9b7440" />
+                  <text x="110" y="258">Act</text>
+
+                  <rect x="238" y="210" width="120" height="80" rx="7" fill="#f3dede" stroke="#b15656" />
+                  <text x="298" y="258">Verify</text>
+
+                  <rect x="426" y="210" width="120" height="80" rx="7" fill="#e3efe7" stroke="#357348" />
+                  <text x="486" y="244">Publish</text>
+                  <text x="486" y="268">/ log</text>
+                </g>
+              </svg>
             </figure>
           </div>
         </section>
